@@ -1,0 +1,57 @@
+.section-1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: $color1;
+
+  @media screen and (max-width:768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .s1-left {
+    @include centerChild;
+    margin: 20px;
+    border: dashed 1px $color5;
+    padding: 30px 15px;
+    
+    .text {
+      
+      span {
+        @include title1;
+        font-size: 2.5rem;
+      }
+      h3 {
+        @include title2;
+        font-size: 1.5rem;
+      }
+      img {
+        width: 35px;
+        margin: 35px 0;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+      img:nth-of-type(2) {
+        border-radius: 150px;
+        width: 90px;
+        margin: 35px auto 20px;
+      }
+      h4 {
+        font-family: $font2;
+        font-weight: 100;
+        font-size: 1.2rem;
+      }
+      h5 {
+        text-transform: uppercase;
+        color: $color2;
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .s1-right {
+    background: url(../image/store-01.jpg) center/cover;
+
+    @media screen and (max-width:768px) {
+      display: none;
+    }
+  }
+}

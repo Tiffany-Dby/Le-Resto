@@ -1,0 +1,53 @@
+.section-5 {
+  .text {
+    background: $color1;
+    width: 85%;
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    padding: 80px 95px;
+
+    @media screen and (max-width:768px) {
+      padding: 80px 65px;
+    }
+    @media screen and (max-width:480px) {
+      margin-top: 170px;
+    }
+    @media screen and (max-width:380px) {
+      padding: 80px 30px;
+    }
+    
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(../image/avatar-02.jpg) center/cover;
+      height: 75px;
+      width: 75px;
+      border-radius: 150px;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 37px;
+
+      span {
+        font-size: 2rem;
+      }
+    }
+    h4 {
+      font-size: 1.9rem;
+      font-weight: 100;
+      margin: 43px auto 20px;
+    }
+    h5 {
+      color: $color5;
+      font-size: 1.25rem;
+      font-weight: 100;
+    }
+  }
+  iframe {
+  margin-top: -150px;
+  }
+}

@@ -1,0 +1,125 @@
+.section-3 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
+  
+  @media screen and (max-width:1024px) {
+    grid-template-columns: 40% 60%;
+  }
+  @media screen and (max-width:768px) {
+    grid-template-columns: 1fr;
+  }
+
+  span {
+    @include title1;
+  }
+  h3 {
+    @include title2;
+  }
+  .s3-left {
+    background: black;
+    color: $white;
+
+    .hours {
+      margin: 30px;
+      border: dashed 1px $color1;
+      padding: 30px 10px;
+
+      h3 {
+        color: $white;
+        letter-spacing: 3px;
+      }
+      img {
+        width: 37px;
+        margin: 40px auto;
+      }
+      h4 {
+        font-family: $font2;
+        text-transform: uppercase;
+        color: $color5;
+        font-weight: 100;
+        font-size: 1.35rem;
+
+        @media screen and (max-width:1200px) {
+          font-size: 1.2rem;
+        }
+        @media screen and (max-width:768px) {
+          font-size: 1.35rem;
+        }
+        @media screen and (max-width:480px) {
+          font-size: 1.2rem;
+        }
+      }
+      p {
+        margin: 15px auto 40px;
+        font-size: 1.05rem;
+
+        @media screen and (max-width:1200px) {
+          font-size: 0.95rem;
+        }
+        @media screen and (max-width:768px) {
+          font-size: 1.05rem;
+        }
+        @media screen and (max-width:480px) {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  .s3-right {
+    @include centerChild;
+    flex-direction: column;
+    background: $color1;
+    
+    @media screen and (max-width:768px) {
+      padding: 40px;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+    }
+    img {
+      width: 30px;
+      margin: 32px auto 45px;
+    }
+    form {
+      width: 95%;
+      max-width: 650px;
+      margin: 0 auto;
+
+      
+      .form-inputs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        row-gap: 22px;
+        margin: 0 auto 50px;
+
+        @media screen and (max-width:768px) {
+          grid-template-columns: 1fr;
+        }
+        
+        > * {
+          border-bottom: solid 1px $color2;
+          height: 55px;
+          width: 88%;
+          margin: 0 auto;
+          font-size: 1.05rem;
+          font-family: $font3;
+          
+          &:focus {
+            color: $color5;
+            border-bottom: solid 1px $color5;
+            font-weight: 700;
+
+            &::placeholder {
+              color: $color5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

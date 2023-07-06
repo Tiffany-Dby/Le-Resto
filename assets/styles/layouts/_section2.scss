@@ -1,0 +1,140 @@
+.section-2 {
+  margin: 70px 0 220px;
+  position: relative;
+  
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: url(../image/bg-menu-01.jpg) center/cover;
+    height: 760px;
+    width: 100%;
+    left: 0;
+    bottom: -150px;
+    z-index: -1;
+  }
+  
+  .s2-header {
+    color: $white;
+
+    h3 {
+      @include title1;
+      font-size: 2.5rem;
+    }
+    img {
+      width: 35px;
+      margin: 35px 0;
+    }
+    .nav-menus {
+      @include alignChildren(space-evenly);
+      width: 92%;
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.25rem;
+
+      @media screen and (max-width:768px) {
+        font-size: 1rem;
+      }
+      @media screen and (max-width:480px) {
+        font-size: 0.9rem;
+      }
+
+      li {
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: solid 1px $white;
+        transition: 0.2s;
+        
+        &:hover {
+          font-weight: 700;
+          color: $color5;
+          border-bottom: solid 1px $color5;
+        }
+      }
+    }
+  }
+  .menus-container {
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+    column-gap: 40px;
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px 25px;
+    background: $color1;
+    border-top: 5px solid $color5;
+
+    @media screen and (max-width:768px) {
+      grid-template-columns: 1fr;
+    }
+    
+    > * {
+      display: grid;
+      grid-template-columns: 28% 57% 15%;
+      justify-content: center;
+      align-items: center;
+      padding: 35px 0;
+      border-bottom: dashed 1px $color3;
+
+      @media screen and (max-width:435px) {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 75% 25%;  
+      }
+
+      img {
+        border-radius: 150px;
+        object-fit: cover;
+        align-self: center;
+        width: 100%;
+        max-width: 112px;
+
+        @media screen and (max-width:1200px) {
+          padding-right: 10px;
+        }
+        @media screen and (max-width:435px) {
+          grid-row: 1/3;
+          grid-column: 1/2;
+        }
+      }
+      .description {
+        text-align: left;
+
+        span {
+          font-size: 1rem;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @media screen and (max-width:360px) {
+            font-size: 0.9rem;
+          }
+        }
+        p {
+          margin-top: 5px;
+
+          @media screen and (max-width:360px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .price {
+
+        @media screen and (max-width:435px) {
+          grid-column: 2/3;
+          text-align: right;
+        }
+
+        p {
+          font-weight: 700;
+          color: $color5;
+          font-size: 1.35rem;
+          justify-self: center;
+
+          @media screen and (max-width:360px) {
+            padding-top: 7px;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
